@@ -28,30 +28,25 @@ services:
   postgres:
     image: postgres
     restart: always
-    container_name: nomeDoBanco
+    container_name: postgres
     environment:
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
     volumes:
       #- data:/var/lib/postgresql/data
-      - ./usuario.sql:/docker-entrypoint-initdb.d/usuario.sql
+      - ./postgres.sql:/docker-entrypoint-initdb.d/postgres.sql
 
   pg-admin:
-
     image: dpage/pgadmin4:6
     restart: always
-    
     environment:
-    
       - PGADMIN_DEFAULT_EMAIL=admin@email.com
       - PGADMIN_DEFAULT_PASSWORD=password
       - PGADMIN_LISTEN_PORT=5050
-    
     ports:
       - "5050:5050"
-
 volumes:
   data:
   

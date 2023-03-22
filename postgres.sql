@@ -1,4 +1,4 @@
-CREATE TABLE public.usuario
+CREATE TABLE public.postgres
 (
     "ID" text,
     "Nome" text,
