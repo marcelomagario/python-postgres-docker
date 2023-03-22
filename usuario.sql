@@ -1,4 +1,4 @@
-CREATE TABLE public.tb_usuario
+CREATE TABLE public.usuario
 (
     "ID" text,
     "Nome" text,
