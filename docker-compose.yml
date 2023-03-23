@@ -27,8 +27,7 @@ version: '3'
 services:
   postgres:
     image: postgres
-    restart: always
-    container_name: postgres
+    container_name: postgresdb
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
@@ -36,7 +35,7 @@ services:
       - "5432:5432"
     volumes:
       #- data:/var/lib/postgresql/data
-      - ./postgres.sql:/docker-entrypoint-initdb.d/postgres.sql
+      - ./usuario.sql:/docker-entrypoint-initdb.d/usuario.sql
 
   pg-admin:
     image: dpage/pgadmin4:6

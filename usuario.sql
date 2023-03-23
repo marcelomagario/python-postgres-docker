@@ -1,4 +1,4 @@
-CREATE TABLE public.postgres
+CREATE TABLE public.shareholder
 (
     "ID" text,
     "Nome" text,

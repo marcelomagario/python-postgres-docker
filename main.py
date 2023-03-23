@@ -4,8 +4,7 @@ from IPython.display import display
 from sqlalchemy import create_engine
 import psycopg2 
 
-engine = create_engine('postgresql+psycopg2://postgres:postgres@172.18.0.3:5432/postgres')
-1
+engine = create_engine('postgresql+psycopg2://postgres:postgres@localhost:5432/postgres')
 
 # making data frame 
 df = pd.read_excel("registro_de_usuarios.xlsx") 
@@ -15,7 +14,7 @@ df = pd.read_excel("registro_de_usuarios.xlsx")
 # function to import Excel to Table tb_usuario from Postgres Database  
 def importToDatabase():
     df = pd.read_excel("registro_de_usuarios.xlsx") 
-    df.to_sql(name='sheet1', con=engine, if_exists='append', index=False)
+    df.to_sql(name='shareholder', con=engine, if_exists='append', index=False)
     # pd.ExcelFile('files/PN_2012-03-15.xlsx')
 
 def main():
