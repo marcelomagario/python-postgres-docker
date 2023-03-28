@@ -7,7 +7,7 @@ On the terminal:
 
 1. Execute $docker-compose up
 2. Execute $docker ps to check the Postgres ID
-3. Execute $docker inspect "<ID of postgres container>"
+3. Execute $docker inspect [ID of postgres container]
 4. Copy the "IP address".
 5. Open the PgAdmin4: http://localhost:5050
 6. user= admin@email.com & password= password
